@@ -5,3 +5,16 @@ set show-all-if-unmodified on
 set skip-completed-text on
 set completion-prefix-display-length 2
 set completion-map-case on
+set completion-query-items 200
+
+set show-all-if-ambiguous on
+set completion-ignore-case on
+TAB: menu-complete
+
+# Immediately add a trailing slash when autocompleting symlinks to directories
+set mark-symlinked-directories on
+
+# Use the text that has already been typed as the prefix for searching through
+# commands (i.e. more intelligent Up/Down behavior)
+"\e[B": history-search-forward
+"\e[A": history-search-backward
